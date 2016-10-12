@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign in</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" ng-submit="login()">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Username" name="username" type="text" ng-model="user.username" autofocus>
+                            </div>
+                            <div style="margin-bottom:0px;" class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password" ng-model="user.password" value="">
+                            </div>
+                            <a style="float:right" href="#/register">Register</a>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <button type="submit" class="btn btn-lg btn-success btn-block">Log in</button>
+                        </fieldset>
+                    </form>
+                    <div ng-show="errorMessage!=''"  style="margin-top: 15px;" class='alert alert-danger' role='alert'>
+                        <strong>
+                            <span class='fa fa-exclamation-triangle'></span><span class='sr-only'></span>
+                            {{errorMessage}}
+                        </strong>  
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
